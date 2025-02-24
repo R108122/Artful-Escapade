@@ -1,11 +1,11 @@
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body and general layout */
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -18,9 +18,9 @@ body {
 
 }
 
-/* Header and Navigation */
+
 header {
-    /* background-color: #333; */
+    /
     padding: 1rem;
 }
 
@@ -57,7 +57,7 @@ nav .nav-links a:hover {
     color: #FFD700;
 }
 
-/* Hamburger Icon */
+
 nav .hamburger {
     display: none;
     flex-direction: column;
@@ -71,7 +71,7 @@ nav .hamburger .bar {
     background-color: white;
 }
 
-/* Mobile Styles */
+
 @media (max-width: 768px) {
     nav .nav-links {
         display: none;
@@ -96,7 +96,7 @@ nav .hamburger .bar {
     }
 }
 
-/* Hero Section */
+
 .hero {
     position: relative;
     height: 100vh;
