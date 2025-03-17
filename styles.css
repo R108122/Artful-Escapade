@@ -103,6 +103,7 @@ nav .hamburger .bar {
 @media (max-width: 1024px) {
     body {
         font-size: 14px;
+        padding: 10px;
     }
     
     .hero h1 {
