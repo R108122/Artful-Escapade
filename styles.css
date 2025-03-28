@@ -50,7 +50,7 @@ nav .nav-links a {
 }
 
 nav .nav-links a:hover {
-    color: #FFD700;
+    color: #3498db;
 }
 
 nav .hamburger {
@@ -96,7 +96,7 @@ nav .hamburger .bar {
 }
 
 .cta-button:hover {
-    background-color: #ffcc00;
+    background-color: #3498db;
 }
 
 /* Responsive Styles */
