@@ -10,30 +10,27 @@
 
   <header>
     <h1>Artful Escapades: Destinations</h1>
-  </header></div>  
-  <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Destination</a></li>
-      <li><a href="#">Blog</a></li> 
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-  </ul>
-  <!-- Hamburger Icon -->
-  <div class="hamburger" onclick="toggleMenu()">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-  </div>
-</nav>
-</header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Destination</a></li>
+        <li><a href="#">Blog</a></li> 
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
 
-<section class="home">
-<div class="hero">
-  <h1>ARTFUL ESCAPADES</h1>
+      <!-- Hamburger Icon -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
+  </header>
 
   <main class="destination-grid">
     <div class="card">
-        <img src="images/stonehenge.jpg" alt="England" class="responsive">
+      <img src="images/stonehenge.jpg" alt="Stonehenge, England" class="responsive" />
       <div class="card-content">
         <h2>Stonehenge, England</h2>
         <p>Step into the mystery of this ancient monument and its historic charm.</p>
@@ -41,7 +38,7 @@
     </div>
 
     <div class="card">
-        <img src="images/kokohead.jpg" alt="Hawaii" class="responsive" />
+      <img src="images/kokohead.jpg" alt="Koko Head, Hawaii" class="responsive" />
       <div class="card-content">
         <h2>Koko Head, Hawaii</h2>
         <p>Hike the steep trail for stunning panoramic views of Oahu's coastline.</p>
@@ -49,13 +46,20 @@
     </div>
 
     <div class="card">
-      <img src="images/byodoin.jpg" alt="Hawaii" class="responsive" />
+      <img src="images/byodoin.jpg" alt="Byodo-In Temple, Hawaii" class="responsive" />
       <div class="card-content">
         <h2>Byodo-In Temple, Hawaii</h2>
         <p>Discover peace and beauty at this replica of Japan's historic temple.</p>
       </div>
     </div>
   </main>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
 
 </body>
 </html>
