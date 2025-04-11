@@ -50,7 +50,7 @@ nav .nav-links a {
 }
 
 nav .nav-links a:hover {
-    color: #FFD700;
+    color: #87CEEB;
 }
 
 nav .hamburger {
@@ -278,7 +278,7 @@ h1 {
   
   .card-content h2 {
     font-size: 1.25rem;
-    color: #ffd580;
+    color: #87CEEB;
     margin-bottom: 0.5rem;
   }
   
