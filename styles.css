@@ -63,7 +63,7 @@ nav .nav-links a {
 }
 
 nav .nav-links a:hover {
-    color: #87CEEB;
+    color: white;
 }
 
 nav .hamburger {
@@ -243,7 +243,7 @@ h1 {
   
   /* Header styles */
   header {
-    background-color: #ffd580;
+    background-color: #000;
     color: white;
     padding: 2rem 1rem;
     text-align: center;
