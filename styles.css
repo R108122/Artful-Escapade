@@ -311,12 +311,19 @@ h1 {
   
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f8ff; 
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f8ff; /* Light blue background */
+        background-image: none !important; /* Remove any image backgrounds */
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-position: initial;
+      } 
   }
   
   header {
