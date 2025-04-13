@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Destinations | Artful Escapades</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="mobile.css">
 </head>
+
 <body>
 
   <header>
-    <h1>Destinations</h1>
     <nav>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="destination.html">Destination</a></li>
-            <li><a href="blog.html">Blog</a></li> 
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>          
-
+      <div class="logo">
+        <a href="index.html">Artful Escapades</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destination.html">Destination</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
       <!-- Hamburger Icon -->
       <div class="hamburger" onclick="toggleMenu()">
         <div class="bar"></div>
@@ -28,7 +32,12 @@
     </nav>
   </header>
 
+  <section class="page-title">
+    <h1>Destinations</h1>
+  </section>
+
   <main class="destination-grid">
+    
     <div class="card">
       <img src="images/stonehenge.jpg" alt="Stonehenge, England" class="responsive" />
       <div class="card-content">
@@ -62,4 +71,5 @@
   </script>
 
 </body>
+
 </html>

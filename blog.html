@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog | Artful Escapades</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="mobile.css">
 </head>
+
 <body>
 
   <header>
-    <h1>Blog</h1>
     <nav>
+      <div class="logo">
+        <a href="index.html">Artful Escapades</a>
+      </div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="destination.html">Destination</a></li>
-        <li><a href="blog.html">Blog</a></li> 
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-      </ul>      
-      
+      </ul>
       <!-- Hamburger Icon -->
       <div class="hamburger" onclick="toggleMenu()">
         <div class="bar"></div>
@@ -27,11 +31,27 @@
       </div>
     </nav>
   </header>
+
+  <section class="page-title">
+    <h1>Blog</h1>
+  </section>
+
   <main class="blog-post">
+
     <h2>Finding Magic in Every Step 🌏✨</h2>
-    <p>Travel isn’t always about crossing oceans — sometimes, it’s about discovering something new just around the corner. Whether I’m hiking up Koko Head in Hawaii or standing in awe at Stonehenge, each adventure brings a fresh perspective and a deeper love for the world.</p>
-    <p>Every destination tells a story — and through <strong>Artful Escapades</strong>, I get to share those stories with you. From peaceful temples to wild coastlines, I’m always chasing the next beautiful escape.</p>
+    <p>Travel isn’t always about crossing oceans — sometimes, it’s about discovering something new just around the
+      corner. Whether I’m hiking up Koko Head in Hawaii or standing in awe at Stonehenge, each adventure brings a fresh
+      perspective and a deeper love for the world.</p>
+    <p>Every destination tells a story — and through <strong>Artful Escapades</strong>, I get to share those stories
+      with you. From peaceful temples to wild coastlines, I’m always chasing the next beautiful escape.</p>
     <p>Thanks for coming along with me. Where should we go next?</p>
   </main>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
 
 </body>
