@@ -361,10 +361,10 @@ body {
   }
   
   main.blog-post h2 {
-    color: #ffa500;
+    color: #000;
   }
   
   .hamburger {
-    display: none; /* hide by default, you can add media queries later if needed */
+    display: none; 
   }
   
