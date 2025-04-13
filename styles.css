@@ -81,9 +81,9 @@ nav .hamburger .bar {
 
 .home {
     display: grid;
-    place-items: center; 
+    place-items: right; 
     height: 100vh;
-    text-align: center;
+    text-align: right;
 }
 
 .hero {
@@ -134,7 +134,7 @@ nav .hamburger .bar {
     nav .nav-links {
         display: none;
         width: 100%;
-        text-align: center;
+        text-align: right;
         position: absolute;
         top: 60px;
         left: 0;
@@ -175,7 +175,7 @@ body {
 header {
   background-color: #5c5470;
   color: white;
-  text-align: center;
+  text-align: right;
   padding: 1.5rem;
 }
 
