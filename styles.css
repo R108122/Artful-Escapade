@@ -35,7 +35,7 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: right;
     position: relative;
 }
 
@@ -175,7 +175,7 @@ body {
 header {
   background-color: #5c5470;
   color: white;
-  text-align: right;
+  text-align: left;
   padding: 1.5rem;
 }
 
@@ -267,7 +267,7 @@ h1 {
   .destination-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: right;
     gap: 2rem;
     padding: 2rem;
   }
@@ -335,7 +335,7 @@ body {
   
   nav {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     margin-top: 10px;
   }
   
