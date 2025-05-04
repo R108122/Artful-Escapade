@@ -1,48 +1,45 @@
-/* Mobile Styles */
-@media (max-width: 1024px) {
-  body {
-    font-size: 14px;
-    padding: 10px;
-    margin: 0;
-    box-sizing: border-box;
-  }
+/* Default Mobile Layout */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background-color: #fff;
+  position: absolute;
+  top: 60px; /* Adjust depending on header height */
+  right: 0;
+  width: 100%;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
 
-  .hero h1 {
-    font-size: 2rem;
-  }
+.nav-links.active {
+  display: flex;
+}
 
-  .hero p {
-    font-size: 1.2rem;
-  }
+.hamburger {
+  display: block;
+  cursor: pointer;
+  padding: 10px;
+}
 
-  .cta-button {
-    font-size: 1rem;
-    padding: 8px 16px;
-  }
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  margin: 6px 0;
+}
 
-  nav .nav-links {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: #333;
-    padding: 20px 0;
-    text-align: center;
-  }
+/* Style for when the hamburger is clicked (active state) */
+.nav-links li {
+  text-align: center;
+  padding: 10px 0;
+}
 
-  nav .nav-links.active {
-    display: flex;
-  }
+.nav-links li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+}
 
-  nav .nav-links li {
-    margin: 10px 0;
-  }
-
-  nav .hamburger {
-    display: flex;
-    cursor: pointer;
-  }
+.nav-links li a:hover {
+  color: #007BFF; /* Change to a hover color */
 }
