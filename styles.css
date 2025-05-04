@@ -1,26 +1,262 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Default navigation for larger screens */
-.nav-links {
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #fff; /* changed to white for contrast */
+  margin: 0;
+  padding: 0;
+  background: url('./images/mountains.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+/* Add a dark overlay over the body */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent dark overlay */
+  z-index: -1; /* keep it behind everything */
+}
+
+/* Header */
+header {
+  padding: 1rem;
+}
+
+nav {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
-.hamburger {
-  display: none; /* Hide hamburger on larger screens */
+nav .logo {
+  width: 250px;
 }
 
-/* Add some padding or style for the navigation links */
-.nav-links li {
-  padding: 10px;
-}
-
-.nav-links li a {
-  color: #333;
+nav .logo a {
   text-decoration: none;
-  font-size: 18px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.nav-links li a:hover {
-  color: #007BFF; /* Change to a hover color */
+nav .nav-links {
+  list-style: none;
+  display: flex;
+  padding: 0;
 }
+
+nav .nav-links li {
+  margin: 0 15px;
+}
+
+nav .nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav .nav-links a:hover {
+  color: white;
+}
+
+nav .hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+nav .hamburger .bar {
+  width: 25px;
+  height: 3px;
+  margin: 4px 0;
+  background-color: white;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+}
+
+.page-title {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.hero {
+  color: white;
+  position: relative;
+  top: 25%;
+}
+
+.hero h1 {
+  font-size: 54px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.cta-button {
+  text-decoration: none;
+  background-color: #FFFFFF;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: black;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color: #ffd700;
+}
+
+/* Destination Section */
+.destination-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-content h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+  color: #5c5470;
+}
+
+.card-content p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Blog Post */
+main.blog-post {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: #222;
+}
+
+main.blog-post h2 {
+  color: #000;
+}
+
+/* About Section */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.about-photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.about-photo a {
+  font-size: 0.9rem;
+  color: #555;
+  text-decoration: underline;
+}
+
+.about-text h2 {
+  margin-bottom: 0.5rem;
+}
+
+.about-text p {
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  color: #222;
+}
+
+.contact-form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: #ff7f50;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #e0673f;
+}
+
