@@ -1,75 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
+<main class="destination-grid">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Destinations | Artful Escapades</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="mobile.css">
-</head>
-
-<body>
-
-  <header>
-    <nav>
-      <div class="logo">
-        <a href="index.html">Artful Escapades</a>
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="destination.html">Destination</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <!-- Hamburger Icon -->
-      <div class="hamburger" onclick="toggleMenu()">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
-    </nav>
-  </header>
-
-  <section class="page-title">
-    <h1>Destinations</h1>
-  </section>
-
-  <main class="destination-grid">
-    
-    <div class="card">
-      <img src="images/stonehenge.jpg" alt="Stonehenge, England" class="responsive" />
-      <div class="card-content">
-        <h2>Stonehenge, England</h2>
-        <p>Step into the mystery of this ancient monument and its historic charm.</p>
-      </div>
+  <!-- Stonehenge Card -->
+  <div class="card">
+    <img src="images/stonehenge.jpg" alt="Stonehenge, England" class="responsive" />
+    <div class="card-content">
+      <h2>Stonehenge, England</h2>
+      <button onclick="openModal('modal1')">Learn More</button>
     </div>
+  </div>
 
-    <div class="card">
-      <img src="images/kokohead.jpg" alt="Koko Head, Hawaii" class="responsive" />
-      <div class="card-content">
-        <h2>Koko Head, Hawaii</h2>
-        <p>Hike the steep trail for stunning panoramic views of Oahu's coastline.</p>
-      </div>
+  <!-- Koko Head Card -->
+  <div class="card">
+    <img src="images/kokohead.jpg" alt="Koko Head, Hawaii" class="responsive" />
+    <div class="card-content">
+      <h2>Koko Head, Hawaii</h2>
+      <button onclick="openModal('modal2')">Learn More</button>
     </div>
+  </div>
 
-    <div class="card">
-      <img src="images/byodoin.jpg" alt="Byodo-In Temple, Hawaii" class="responsive" />
-      <div class="card-content">
-        <h2>Byodo-In Temple, Hawaii</h2>
-        <p>Discover peace and beauty at this replica of Japan's historic temple.</p>
-      </div>
+  <!-- Byodo-In Card -->
+  <div class="card">
+    <img src="images/byodoin.jpg" alt="Byodo-In Temple, Hawaii" class="responsive" />
+    <div class="card-content">
+      <h2>Byodo-In Temple, Hawaii</h2>
+      <button onclick="openModal('modal3')">Learn More</button>
     </div>
-  </main>
+  </div>
 
-  <script>
-    function toggleMenu() {
-      const navLinks = document.querySelector('.nav-links');
-      navLinks.classList.toggle('active');
-    }
-  </script>
+</main>
 
-</body>
+<!-- Modals -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <h2>Stonehenge, England</h2>
+    <p>Stonehenge is a prehistoric monument built over 4,000 years ago. Its purpose remains a mystery, but its awe-inspiring presence continues to attract visitors from around the world.</p>
+  </div>
+</div>
 
-</html>
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal2')">&times;</span>
+    <h2>Koko Head, Hawaii</h2>
+    <p>Koko Head Crater Trail is a challenging hike up a steep incline of abandoned railroad ties, leading to sweeping views of the southeastern shore of Oahu.</p>
+  </div>
+</div>
+
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal3')">&times;</span>
+    <h2>Byodo-In Temple, Hawaii</h2>
+    <p>This peaceful temple, located at the foot of the Ko'olau Mountains, is a replica of the 900-year-old temple in Uji, Japan. It represents spiritual harmony and beauty.</p>
+  </div>
+</div>
