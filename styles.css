@@ -1,41 +1,148 @@
-/* Style the navigation menu */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
+/* Reset + Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background: url('./images/mountains.jpg') no-repeat center center fixed;
+  background-size: cover;
   position: relative;
 }
 
-/* Hide the links inside the navigation menu (except for logo/home) */
-.topnav #myLinks {
-  display: none;
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
 
-/* Style navigation menu links */
-.topnav a {
+/* Navigation */
+.topnav {
+  overflow: hidden;
+  background-color: rgba(51, 51, 51, 0.85);
+  position: relative;
+  padding: 0.5rem 1rem;
+}
+
+.topnav .logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.topnav #myLinks {
+  display: none;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.topnav #myLinks a {
   color: white;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  display: block;
 }
 
-/* Style the hamburger menu */
-.topnav a.icon {
-  background: black;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-/* Add a grey background color on mouse-over */
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
 
-/* Style the active link (or home/logo) */
-.active {
-  background-color: #04AA6D;
-  color: white;
+.topnav a.icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 14px 16px;
+  cursor: pointer;
+}
+
+/* Animated Hamburger */
+.bar1, .bar2, .bar3 {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+/* Hero Section */
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+.cta-button {
+  text-decoration: none;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: black;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #ffd700;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  color: #fff;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .topnav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #myLinks {
+    display: flex !important;
+    flex-direction: row;
+  }
+
+  .icon {
+    display: none;
+  }
 }

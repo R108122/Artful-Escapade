@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artful Escapades</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="mobile.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Artful Escapades</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html">Artful Escapades</a>
-            </div>  
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="destination.html">Destination</a></li>
-                <li><a href="blog.html">Blog</a></li> 
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>              
-            <!-- Hamburger Icon -->
-            <div class="hamburger" onclick="toggleMenu()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </nav>
-    </header>
 
-    <section class="home">
-        <div class="hero">
-            <h1>ARTFUL ESCAPADES</h1>
-            <p>Explore the World, One Journey at a Time</p>
-            <a href="destination.html" class="cta-button">Start Your Journey</a>
-        </div>
-    </section>
+  <!-- Navigation -->
+  <nav class="topnav">
+    <a href="#" class="logo">Artful Escapades</a>
+    <div id="myLinks">
+      <a href="#home">Home</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </a>
+  </nav>
 
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        }
-    </script>
+  <!-- Hero Section -->
+  <section id="home" class="home">
+    <div class="hero">
+      <h1>Adventure Awaits</h1>
+      <p>Discover hidden gems and creative escapes</p>
+      <a href="#destinations" class="cta-button">Explore Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; Artful Escapades</p>
+  </footer>
+
+  <!-- JavaScript for Menu -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("myLinks");
+      const icon = document.querySelector(".icon");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+      icon.classList.toggle("change");
+    }
+  </script>
+
 </body>
 </html>
