@@ -85,6 +85,7 @@ nav .hamburger .bar {
   height: 3px;
   margin: 4px 0;
   background-color: white;
+  transition: 0.3s; /* Add transition for smoother effect */
 }
 
 /* Hero Section */
@@ -164,12 +165,13 @@ nav .hamburger .bar {
     cursor: pointer;
     padding: 10px;
   }
-  
+
   .bar {
     width: 30px;
     height: 4px;
     background-color: #333;
     margin: 6px 0;
+    transition: transform 0.3s, background-color 0.3s; /* Add animation for bar effect */
   }
 
   nav .nav-links li {
@@ -186,46 +188,17 @@ nav .hamburger .bar {
   nav .nav-links li a:hover {
     color: #ffd700; /* Hover color */
   }
-}
 
-/* Destination Grid */
-.destination-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  padding: 1rem;
-}
+  /* Animated Hamburger effect */
+  .hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px); /* Top bar */
+  }
 
-/* Cards */
-.card {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.2s ease;
-}
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0; /* Hide middle bar */
+  }
 
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 1rem;
-}
-
-.card-content h2 {
-  margin: 0 0 0.5rem;
-  font-size: 1.3rem;
-  color: #5c5470;
-}
-
-.card-content p {
-  color: #666;
-  font-size: 0.95rem;
+  .hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px); /* Bottom bar */
+  }
 }
