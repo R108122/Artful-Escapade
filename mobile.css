@@ -1,13 +1,10 @@
-@media (max-width: 1024px) {
-  body {
-    font-size: 14px;
-    padding: 10px;
-    margin: 0;
-    box-sizing: border-box;
-  }
 
+  /* Mobile Styles */
+@media only screen and (max-width: 768px) {
+
+  /* Adjust home section */
   .hero h1 {
-    font-size: 2rem;
+    font-size: 36px;
   }
 
   .hero p {
@@ -16,32 +13,71 @@
 
   .cta-button {
     font-size: 1rem;
-    padding: 8px 16px;
+    padding: 8px 15px;
   }
 
-  nav .nav-links {
-    display: none;
+  /* Make nav links stack vertically for mobile */
+  .nav-links {
     flex-direction: column;
-    align-items: center;
-    width: 100%;
+    display: none; /* initially hidden */
     position: absolute;
     top: 60px;
     left: 0;
-    background-color: #333;
-    padding: 20px 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* dark background for mobile */
+    padding: 10px;
     text-align: center;
+    z-index: 100;
   }
 
-  nav .nav-links.active {
+  /* Display the nav links when hamburger menu is clicked */
+  .nav-links.active {
     display: flex;
   }
 
-  nav .nav-links li {
+  /* Adjust navigation items for mobile */
+  .nav-links li {
     margin: 10px 0;
   }
 
-  nav .hamburger {
+  /* Style the hamburger menu */
+  .hamburger {
     display: flex;
+    flex-direction: column;
     cursor: pointer;
+    padding: 10px;
+  }
+
+  .hamburger .bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 5px 0;
+  }
+
+  /* Adjust about section photo */
+  .about-photo img {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Adjust form elements */
+  .contact-form input,
+  .contact-form textarea {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  /* Adjust card images */
+  .card img {
+    height: 150px;
+  }
+
+  .destination-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-content h2 {
+    font-size: 1.1rem;
   }
 }

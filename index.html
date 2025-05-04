@@ -8,23 +8,25 @@
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="topnav">
-    <a href="#" class="logo">Artful Escapades</a>
-    <div id="myLinks">
-      <a href="#home">Home</a>
-      <a href="#destinations">Destinations</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-    </a>
-  </nav>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="#">Artful Escapades</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
+  </header>
 
-  <!-- Hero Section -->
   <section id="home" class="home">
     <div class="hero">
       <h1>Adventure Awaits</h1>
@@ -33,20 +35,10 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; Artful Escapades</p>
   </footer>
 
-  <!-- JavaScript for Menu -->
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("myLinks");
-      const icon = document.querySelector(".icon");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
-      icon.classList.toggle("change");
-    }
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
