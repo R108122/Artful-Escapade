@@ -1,48 +1,48 @@
 
   /* Mobile Layout */
 @media (max-width: 767px) {
-  .nav-links {
-      display: none;
-      flex-direction: column;
-      background-color: #fff;
-      position: absolute;
-      top: 60px; /* Adjust depending on header height */
-      right: 0;
-      width: 100%;
-      padding: 10px 20px;
-      transition: all 0.3s ease;
-      margin: 0;
-  }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px; /* Adjust depending on header height */
+        right: 0;
+        width: 100%;
+        padding: 10px 20px;
+        transition: all 0.3s ease;
+        margin: 0;
+    }
 
-  .nav-links.active {
-      display: flex;
-  }
+    .nav-links.active {
+        display: flex;
+    }
 
-  .hamburger {
-      display: block;
-      cursor: pointer;
-      padding: 10px;
-  }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+    }
 
-  .bar {
-      width: 30px;
-      height: 4px;
-      background-color: #333;
-      margin: 6px 0;
-  }
+    .bar {
+        width: 30px;
+        height: 4px;
+        background-color: #333;
+        margin: 6px 0;
+    }
 
-  .nav-links li {
-      text-align: center;
-      padding: 10px 0;
-  }
+    .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+    }
 
-  .nav-links li a {
-      color: #333;
-      text-decoration: none;
-      font-size: 18px;
-  }
+    .nav-links li a {
+        color: #333;
+        text-decoration: none;
+        font-size: 18px;
+    }
 
-  .nav-links li a:hover {
-      color: #007BFF;
-  }
+    .nav-links li a:hover {
+        color: #007BFF;
+    }
 }
