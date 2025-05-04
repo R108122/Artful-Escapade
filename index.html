@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Artful Escapades</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artful Escapades</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Artful Escapades</a>
+            </div>  
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destination.html">Destination</a></li>
+                <li><a href="blog.html">Blog</a></li> 
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>              
+            <!-- Hamburger Icon -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
 
-  <header>
-    <nav>
-      <div class="logo">
-        <a href="#">Artful Escapades</a>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#destinations">Destinations</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="hamburger">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
-    </nav>
-  </header>
+    <section class="home">
+        <div class="hero">
+            <h1>ARTFUL ESCAPADES</h1>
+            <p>Explore the World, One Journey at a Time</p>
+            <a href="destination.html" class="cta-button">Start Your Journey</a>
+        </div>
+    </section>
 
-  <section id="home" class="home">
-    <div class="hero">
-      <h1>Adventure Awaits</h1>
-      <p>Discover hidden gems and creative escapes</p>
-      <a href="#destinations" class="cta-button">Explore Now</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; Artful Escapades</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
+
+
+

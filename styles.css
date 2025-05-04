@@ -1,14 +1,15 @@
-/* Global Styles */
+/* Reset all default margins and padding */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #fff; /* changed to white for contrast */
+  color: #fff; /* Text color set to white for contrast */
   margin: 0;
   padding: 0;
   background: url('./images/mountains.jpg') no-repeat center center fixed;
@@ -16,7 +17,7 @@ body {
   position: relative;
 }
 
-/* Add a dark overlay over the body */
+/* Add dark overlay */
 body::before {
   content: '';
   position: fixed;
@@ -24,11 +25,11 @@ body::before {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent dark overlay */
-  z-index: -1; /* keep it behind everything */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+  z-index: -1; /* Keep overlay behind other elements */
 }
 
-/* Header */
+/* Header Styles */
 header {
   padding: 1rem;
 }
@@ -37,6 +38,7 @@ nav {
   display: flex;
   justify-content: space-between;
   position: relative;
+  padding: 1rem;
 }
 
 nav .logo {
@@ -50,6 +52,7 @@ nav .logo a {
   font-weight: bold;
 }
 
+/* Navigation Links */
 nav .nav-links {
   list-style: none;
   display: flex;
@@ -67,9 +70,10 @@ nav .nav-links a {
 }
 
 nav .nav-links a:hover {
-  color: white;
+  color: #ffd700; /* Hover color */
 }
 
+/* Mobile Navigation */
 nav .hamburger {
   display: none;
   flex-direction: column;
@@ -83,17 +87,12 @@ nav .hamburger .bar {
   background-color: white;
 }
 
-/* Home Section */
+/* Hero Section */
 .home {
   display: flex;
   flex-direction: column;
   height: 100vh;
   text-align: center;
-}
-
-.page-title {
-  text-align: center;
-  padding-top: 20px;
 }
 
 .hero {
@@ -121,10 +120,75 @@ nav .hamburger .bar {
 }
 
 .cta-button:hover {
-  background-color: #ffd700;
+  background-color: #ffd700; /* Hover color */
 }
 
-/* Destination Section */
+/* Desktop Styles */
+@media (min-width: 768px) {
+  nav .nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent; /* Transparent background on desktop */
+  }
+
+  .hamburger {
+    display: none; /* Hide hamburger on desktop */
+  }
+
+  nav .nav-links li {
+    padding: 10px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  nav .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+  }
+
+  nav .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    margin: 6px 0;
+  }
+
+  nav .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  nav .nav-links li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  nav .nav-links li a:hover {
+    color: #ffd700; /* Hover color */
+  }
+}
+
+/* Destination Grid */
 .destination-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -132,6 +196,7 @@ nav .hamburger .bar {
   padding: 1rem;
 }
 
+/* Cards */
 .card {
   background-color: #fff;
   border-radius: 12px;
@@ -165,97 +230,4 @@ nav .hamburger .bar {
   font-size: 0.95rem;
 }
 
-/* Blog Post */
-main.blog-post {
-  max-width: 800px;
-  margin: 40px auto;
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  color: #222;
-}
 
-main.blog-post h2 {
-  color: #000;
-}
-
-/* About Section */
-.about-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-  text-align: center;
-}
-
-.about-photo img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
-.about-photo a {
-  font-size: 0.9rem;
-  color: #555;
-  text-decoration: underline;
-}
-
-.about-text h2 {
-  margin-bottom: 0.5rem;
-}
-
-.about-text p {
-  max-width: 600px;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-/* Contact Form */
-.contact-form {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  background-color: #f2f2f2;
-  border-radius: 10px;
-  color: #222;
-}
-
-.contact-form h2 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 1rem;
-}
-
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-form label {
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 0.8rem;
-  margin-bottom: 1.2rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.contact-form button {
-  background-color: #ff7f50;
-  color: white;
-  padding: 0.8rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background-color: #e0673f;
-}
